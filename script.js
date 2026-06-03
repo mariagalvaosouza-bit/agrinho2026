@@ -1,13 +1,7 @@
-/* =====================================================
-   AGRINHO 2026 - SCRIPT.JS
-   Tecnologia, Sustentabilidade e IA no Campo
-===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==========================================
-       TAMANHO DA FONTE
-    ========================================== */
+  
 
     let fontSize = 100;
 
@@ -30,10 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ==========================================
-       MODO ESCURO / CLARO
-    ========================================== */
-
+   
     const temaBtn = document.getElementById("alternarTema");
 
     if (temaBtn) {
@@ -42,10 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ==========================================
-       LEITURA POR VOZ
-    ========================================== */
-
+   
+    
     const btnLer = document.getElementById("lerConteudo");
     const btnParar = document.getElementById("pararLeitura");
 
@@ -78,9 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ==========================================
-       ACCORDION
-    ========================================== */
 
     const accordions =
         document.querySelectorAll(".accordion-btn");
@@ -106,9 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* ==========================================
-       FORMULÁRIO DE INSCRIÇÃO
-    ========================================== */
+   
 
     const formulario =
         document.getElementById("formInscricao");
@@ -132,9 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /* ==========================================
-       ÁREA DE COMENTÁRIOS
-    ========================================== */
+   
 
     const enviarComentario =
         document.getElementById("enviarComentario");
@@ -178,10 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /* ==========================================
-       ANIMAÇÃO AO ROLAR
-    ========================================== */
-
+   
     const elementos =
         document.querySelectorAll(".revelar");
 
@@ -209,9 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observador.observe(elemento);
     });
 
-    /* ==========================================
-       SCROLL SUAVE
-    ========================================== */
+   
 
     const links =
         document.querySelectorAll('a[href^="#"]');
