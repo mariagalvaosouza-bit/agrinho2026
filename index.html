@@ -1,35 +1,284 @@
-<section class="hero">
-    <div class="hero-content">
-        <span class="tag">🌱 Programa Agrinho 2026</span>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 | Tecnologia no Campo</title>
 
-        <h1>
-            Conectando o Campo, a Tecnologia e o Futuro
-        </h1>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <aside class="acessibilidade">
+        <h3>Acessibilidade</h3>
+
+        <button id="aumentarFonte">A+</button>
+        <button id="diminuirFonte">A-</button>
+        <button id="alternarTema">🌙 Tema</button>
+        <button id="lerConteudo">🔊 Ler</button>
+        <button id="pararLeitura">⏹ Parar</button>
+    </aside>
+
+    
+    <header class="hero">
+
+        <div class="hero-texto">
+            <span class="badge">
+                🌱 AGRINHO 2026
+            </span>
+
+            <h1>
+                O Futuro da Agricultura
+                Está na Inteligência Artificial
+            </h1>
+
+            <p>
+                Tecnologia, sustentabilidade e inovação
+                trabalhando juntas para transformar o campo,
+                aumentar a produtividade e preservar os
+                recursos naturais.
+            </p>
+
+            <a href="#conteudo" class="botao">
+                Explorar Conteúdo
+            </a>
+        </div>
+
+        <div class="hero-imagem">
+
+            <div class="imagem">
+                <img src="Foto1.png"
+                     alt="Tecnologia agrícola">
+            </div>
+
+        </div>
+
+    </header>
+
+   
+    <main id="conteudo-principal">
+
+        <section id="conteudo" class="secao revelar">
+
+            <h2>
+                Tecnologia Agrícola e o Papel do Brasil
+            </h2>
+
+            <p>
+                O Brasil vem se destacando mundialmente
+                por unir inovação, produtividade e
+                sustentabilidade no agronegócio.
+            </p>
+
+        </section>
+
+        <section class="galeria revelar">
+
+            <div class="imagem">
+                <img src="Foto1.png"
+                     alt="Agricultura digital">
+            </div>
+
+            <div class="imagem">
+                <img src="Foto2.png"
+                     alt="Uso de drones">
+            </div>
+
+            <div class="imagem">
+                <img src="Foto3.png"
+                     alt="Inteligência artificial">
+            </div>
+
+        </section>
+
+        
+
+        <section class="cards revelar">
+
+            <div class="card">
+                <h3>🌿 Sustentabilidade</h3>
+
+                <p>
+                    Uso inteligente de recursos naturais,
+                    reduzindo desperdícios e impactos
+                    ambientais.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤖 Inteligência Artificial</h3>
+
+                <p>
+                    Monitoramento de culturas, previsão
+                    climática e análise de dados em
+                    tempo real.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚜 Automação</h3>
+
+                <p>
+                    Máquinas inteligentes aumentam a
+                    eficiência e reduzem custos de
+                    produção.
+                </p>
+            </div>
+
+        </section>
+
+        
+
+        <section class="accordion revelar">
+
+            <h2>
+                Benefícios da IA no Campo
+            </h2>
+
+            <button class="accordion-btn">
+                1. Otimização de Recursos
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    Sistemas inteligentes ajudam a
+                    economizar água, fertilizantes e
+                    energia.
+                </p>
+            </div>
+
+            <button class="accordion-btn">
+                2. Monitoramento de Culturas
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    Drones e sensores permitem detectar
+                    problemas rapidamente.
+                </p>
+            </div>
+
+            <button class="accordion-btn">
+                3. Gestão de Riscos
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    A IA auxilia na previsão de safras
+                    e eventos climáticos.
+                </p>
+            </div>
+
+        </section>
+
+      
+        <section class="formulario revelar">
+
+            <div class="texto-formulario">
+
+                <h2>
+                    Seminário Online Agrinho
+                </h2>
+
+                <p>
+                    Venha conhecer melhor como a IA
+                    pode ser uma grande aliada do campo.
+                </p>
+
+            </div>
+
+            <form id="formInscricao">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="E-mail"
+                    required>
+
+                <input
+                    type="text"
+                    placeholder="Cidade"
+                    required>
+
+                <input
+                    type="text"
+                    placeholder="Estado"
+                    required>
+
+                <input
+                    type="text"
+                    placeholder="País"
+                    required>
+
+                <button type="submit">
+                    Inscrever-se
+                </button>
+
+            </form>
+
+        </section>
+
+        
+
+        <section class="comentarios revelar">
+
+            <h2>
+                Compartilhe sua opinião
+            </h2>
+
+            <textarea
+                id="comentario"
+                placeholder="Digite seu comentário">
+            </textarea>
+
+            <button id="enviarComentario">
+                Enviar Comentário
+            </button>
+
+            <div id="listaComentarios">
+            </div>
+
+        </section>
+
+    </main>
+
+   
+
+    <footer>
+
+        <h3>
+            Referências
+        </h3>
+
+        <ul>
+            <li>
+                Bem Agro
+            </li>
+
+            <li>
+                Agrolink
+            </li>
+        </ul>
 
         <p>
-            O Agrinho incentiva a educação, a sustentabilidade e a inovação,
-            mostrando como a tecnologia pode transformar a agricultura,
-            fortalecer a produção de alimentos e construir um futuro mais
-            inteligente para o Brasil.
+            AgroFuturo 2026 °
+            Conectando a inteligência,
+            tecnologia à terra de forma
+            sustentável.
         </p>
 
-        <div class="hero-buttons">
-            <a href="#conteudo" class="btn-primary">
-                Saiba Mais
-            </a>
+    </footer>
 
-            <a href="#formulario" class="btn-secondary">
-                Participar
-            </a>
-        </div>
-    </div>
+    <script src="script.js"></script>
 
-    <div class="hero-image">
-        <div class="placeholder-image">
-            <span>Imagem Agrinho</span>
-        </div>
-    </div>
-</section>
+</body>
+</html>
 
 
 
