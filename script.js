@@ -1,122 +1,108 @@
 
-// =====================
 // ACCORDION
-// =====================
 
-const accordionButtons =
+const botoes =
 document.querySelectorAll(".accordion-btn");
 
-accordionButtons.forEach(button => {
+botoes.forEach(botao=>{
 
-    button.addEventListener("click", () => {
+botao.addEventListener("click",()=>{
 
-        const content =
-        button.nextElementSibling;
+const conteudo =
+botao.nextElementSibling;
 
-        if(content.style.maxHeight){
-            content.style.maxHeight = null;
-        }else{
-            content.style.maxHeight =
-            content.scrollHeight + "px";
-        }
+if(conteudo.style.maxHeight){
 
-    });
+conteudo.style.maxHeight=null;
+
+}else{
+
+conteudo.style.maxHeight=
+conteudo.scrollHeight + "px";
+
+}
 
 });
 
-// =====================
+});
+
+// TEMA
+
+const toggleTema =
+document.getElementById("toggleTema");
+
+toggleTema.addEventListener("click",()=>{
+
+document.body.classList.toggle("dark");
+
+});
+
 // FONTE
-// =====================
 
-let fontSize = 100;
-
-document
-.getElementById("increaseFont")
-.addEventListener("click", () => {
-
-    fontSize += 10;
-    document.body.style.fontSize =
-    fontSize + "%";
-
-});
+let tamanho = 16;
 
 document
-.getElementById("decreaseFont")
-.addEventListener("click", () => {
+.getElementById("aumentarFonte")
+.addEventListener("click",()=>{
 
-    fontSize -= 10;
-    document.body.style.fontSize =
-    fontSize + "%";
+tamanho += 2;
 
-});
-
-// =====================
-// DARK MODE
-// =====================
-
-document
-.getElementById("toggleTheme")
-.addEventListener("click", () => {
-
-    document.body.classList.toggle(
-        "dark-mode"
-    );
-
-});
-
-// =====================
-// LEITURA POR VOZ
-// =====================
-
-let speech;
-
-document
-.getElementById("startSpeech")
-.addEventListener("click", () => {
-
-    const content =
-    document.getElementById("main-content")
-    .innerText;
-
-    speech =
-    new SpeechSynthesisUtterance(
-        content
-    );
-
-    speech.lang = "pt-BR";
-
-    window.speechSynthesis.speak(
-        speech
-    );
-
-});
-
-document
-.getElementById("stopSpeech")
-.addEventListener("click", () => {
-
-    window.speechSynthesis.cancel();
-
-});
-
-// =====================
-// FORMULÁRIO
-// =====================
-
-const form =
-document.querySelector("form");
-
-form.addEventListener(
-    "submit",
-    function(event){
-
-        event.preventDefault();
-
-        alert(
-            "Inscrição enviada com sucesso!"
-        );
-
-        form.reset();
-
-    }
+document.documentElement
+.style.setProperty(
+"--font",
+tamanho + "px"
 );
+
+});
+
+document
+.getElementById("diminuirFonte")
+.addEventListener("click",()=>{
+
+tamanho -= 2;
+
+if(tamanho < 12) tamanho = 12;
+
+document.documentElement
+.style.setProperty(
+"--font",
+tamanho + "px"
+);
+
+});
+
+// LEITURA POR VOZ
+
+let fala;
+
+const synth =
+window.speechSynthesis;
+
+document
+.getElementById("lerPagina")
+.addEventListener("click",()=>{
+
+synth.cancel();
+
+const conteudo =
+document.getElementById("conteudoPrincipal")
+.innerText;
+
+fala =
+new SpeechSynthesisUtterance(
+conteudo
+);
+
+fala.lang="pt-BR";
+
+synth.speak(fala);
+
+});
+
+document
+.getElementById("pararLeitura")
+.addEventListener("click",()=>{
+
+synth.cancel();
+
+});
